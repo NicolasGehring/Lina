@@ -27,3 +27,5 @@ body{
     overflow-y: hidden;
 }
 
+
+#map { height: 100%; }
