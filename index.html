@@ -7,29 +7,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ADHS Education</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <title>ADHS</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div id="map"></div>
-     <!-- <div class="text"><h1>LINA LORENZ ADHS Projekt</h1></div>
-      <div class="scrollbox">
-        <img class="pic" src="pic.jpeg">
-    </div>
-    --> 
   </body>
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
   crossorigin=""></script>
   <script>
-    //.setView([72,256], 1);
     var map = L.map('map',
     {crs: L.CRS.Simple,
-    zoom:5}
+ }
     )
-    //var imageUrl = 'http://www.lib.utexas.edu/maps/historical/newark_nj_1922.jpg',
-    var imageUrl = './lepo.jpg',
-    imageBounds = [[0,0], [144,512]];
+    var imageUrl = './lepo1.jpg',
+    imageBounds = [[0,0], [72,1056]];
     L.imageOverlay(imageUrl, imageBounds).addTo(map);
     map.fitBounds(imageBounds)
     map.setMaxBounds(map.getBounds());
