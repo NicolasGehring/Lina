@@ -22,13 +22,25 @@
   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
   crossorigin=""></script>
   <script>
-    var map = L.map('map',{crs: L.CRS.Simple}).setView([40.712, -74.22], 13);
+    //.setView([72,256], 1);
+    var map = L.map('map',
+    {crs: L.CRS.Simple,
+    zoom:5}
+    )
     //var imageUrl = 'http://www.lib.utexas.edu/maps/historical/newark_nj_1922.jpg',
-    var imageUrl = './lepo.svg',
-
-
-    imageBounds = [[40.712216, -74.22655], [40.773941, -74.12544]];
+    var imageUrl = './lepo.jpg',
+    imageBounds = [[0,0], [144,512]];
     L.imageOverlay(imageUrl, imageBounds).addTo(map);
+    map.fitBounds(imageBounds)
+    map.setMaxBounds(map.getBounds());
+
+    var popup = L.popup({
+          closeButton: true,
+          autoClose: false
+        })
+        .setLatLng([105,35])
+        .setContent('<p>Hallo ich bin Lina hier ist mein Demo Textg in dem ich alles akläre</p>')
+        .openOn(map);
 
   </script>
 </html>
