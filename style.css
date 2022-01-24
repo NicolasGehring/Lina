@@ -1,20 +1,4 @@
 
-
-.pic{
-    height: 100%;
-}
-
-.scrollbox{
-    height:90%;
-    overflow: auto;
-    overflow-y: hidden;
-}
-
-.text{
-    height:10%
-}
-
-
 html{
     height: 100%;
     overflow-y: hidden;

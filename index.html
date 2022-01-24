@@ -27,14 +27,14 @@
     imageBounds = [[0,0], [72,1056]];
     L.imageOverlay(imageUrl, imageBounds).addTo(map);
     map.fitBounds(imageBounds)
-    map.setMaxBounds(map.getBounds());
+    map.setMaxBounds(imageBounds);
 
     var popup = L.popup({
           closeButton: true,
           autoClose: false
         })
         .setLatLng([105,35])
-        .setContent('<p>Hallo ich bin Lina hier ist mein Demo Textg in dem ich alles akläre</p>')
+        .setContent('<p>Hier geht es laus</p>')
         .openOn(map);
 
   </script>
